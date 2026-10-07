@@ -3847,6 +3847,14 @@
         return;
       }
 
+      // If we are not on a sub-route (e.g. hash is empty, or points to an in-page section like #creators)
+      pageHome.hidden = false;
+      pageCreators.hidden = true;
+      pageAgents.hidden = true;
+      pageContact.hidden = true;
+      pageSetup.hidden = true;
+      document.title = "Kreatorhub | Where Brands Meet World-Class Creators";
+
       if (!scrollAfter) return;
 
       const anchor = document.getElementById(hash.slice(1));
